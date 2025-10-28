@@ -20,6 +20,8 @@ library(group6.Rpackage)
 
 # Description of package
 
+This packange includes functions for the central dogma including constructing a random DNA sequence, transcribing it into RNA, extracting codons, translating the codons into amino acids and finally plotting the amino acid composition.
+
 # Function 1 - Line
 
 # Function 2 - Sigrid
