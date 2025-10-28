@@ -18,14 +18,16 @@ knitr::opts_chunk$set(
 library(group6.Rpackage)
 ```
 
-# Function 1
+# Description of package
 
-# Function 2
+# Function 1 - Line
 
-# Function 3
+# Function 2 - Sigrid
 
-# Function 4
+# Function 3 - Mathilde
 
-# Function 5
+# Function 4 - Kristine
+
+# Function 5 - Alberte
 
 # Use cases and functions to include
