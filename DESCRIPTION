@@ -2,26 +2,15 @@ Package: group6.Rpackage
 Type: Package
 Title: Replicate of the central dogma of molecular biology
 Version: 0.1.0
-Authors@R: c(
-    person("Mathilde", "Due", email = "s215063@dtu.dk", role = c("aut", "cre")),
-    person("Alberte", "Englund", email = "s215067@dtu.dk", role = "aut"),
-    person("Kristine", "Johansen", email = "s215098@dtu.dk", role = "aut"),
-    person("Sigrid", "Frandsen", email = "s205875@dtu.dk", role = "aut"),
-    person("Line", "Gormsen", email = "s215111@dtu.dk", role = "aut")
-)
+Authors@R: c(person("Mathilde","Due", email="s215063@dtu.dk", role=c("aut","cre")), person("Alberte","Englund", email="s215067@dtu.dk", role="aut"), person("Kristine","Johansen", email="s215098@dtu.dk", role="aut"), person("Sigrid","Frandsen", email="s205875@dtu.dk", role="aut"), person("Line","Gormsen", email="s215111@dtu.dk", role="aut"))
 Description: Functions that demonstrate steps of the central dogma of molecular biology.
-    This package provides utilities for working with nucleotide sequences, such as
-    splitting sequences into codons, and related helpers.
+    This package provides utilities for working with nucleotide sequences.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends:
     R (>= 3.5)
 RoxygenNote: 7.3.2
-<<<<<<< HEAD
 Suggests:
-=======
-Suggests: 
->>>>>>> d3da5d4b3295e34f2167142df67909769e38eb0a
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
