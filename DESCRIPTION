@@ -1,0 +1,36 @@
+Package: group6.Rpackage
+Type: Package
+Title: Replicate of the central dogma of molecular biology
+Version: 0.1.0
+Authors@R: c(
+    person(
+      "Mathilde", "Due",
+      email = "s215063@dtu.dk",
+      role = c("aut", "cre")
+    )
+    person(
+      "Alberte", "Englund",
+      email = "s215067@dtu.dk",
+      role = c("aut", "cre")
+    )
+    person(
+      "Kristine", "Johansen",
+      email = "s215098@dtu.dk",
+      role = c("aut", "cre")
+    )
+    person(
+      "Sigrid", "Frandsen",
+      email = "s205875@dtu.dk",
+      role = c("aut", "cre")
+    )
+    person(
+      "Line", "Gormsen",
+      email = "s215111@dtu.dk",
+      role = c("aut", "cre")
+    )
+  )
+Description: More about what it does (maybe more than one line).
+    Continuation lines should be indented.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
