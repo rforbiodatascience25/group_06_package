@@ -10,4 +10,3 @@ library(testthat)
 library(group6.Rpackage)
 
 test_check("group6.Rpackage")
-
