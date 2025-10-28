@@ -1,0 +1,31 @@
+---
+title: "group_06_package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{group_06_package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(group6.Rpackage)
+```
+
+# Function 1
+
+# Function 2
+
+# Function 3
+
+# Function 4
+
+# Function 5
+
+# Use cases and functions to include
