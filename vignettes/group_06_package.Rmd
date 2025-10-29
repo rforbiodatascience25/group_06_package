@@ -20,7 +20,7 @@ library(group6.Rpackage)
 
 # Description of package
 
-This packange includes functions for the central dogma including constructing a random DNA sequence, transcribing it into RNA, extracting codons, translating the codons into amino acids and finally plotting the amino acid composition.
+This package includes functions for the central dogma including constructing a random DNA sequence, transcribing it into RNA, extracting codons, translating the codons into amino acids and finally plotting the amino acid composition.
 
 # Function 1 - Line
 
@@ -48,11 +48,11 @@ plot_aa_frequency("sequence")
 
 #### **Value**
 
-A **ggplot2** bar plot showing the count of each amino acid in the provided sequence. Each bar corresponds to a unique amino acid, with height proportional to its frequency in the sequence.
+A `ggplot2` bar plot showing the count of each amino acid in the provided sequence. Each bar corresponds to a unique amino acid, with height proportional to its frequency in the sequence.
 
 #### **Details**
 
-Internally, the function splits the input sequence into individual amino acids, counts their occurrences using `stringr::str_count()`, and constructs a frequency table. The result is rendered as a bar plot using **`ggplot2`** with a `theme_bw()` style. Amino acids are colored distinctly, but the legend is suppressed for visual clarity.
+Internally, the function splits the input sequence into individual amino acids, counts their occurrences using `stringr::str_count()`, and constructs a frequency table. The result is rendered as a bar plot using `ggplot2` with a `theme_bw()` style. Amino acids are colored distinctly, but the legend is suppressed for visual clarity.
 
 #### **Examples**
 
