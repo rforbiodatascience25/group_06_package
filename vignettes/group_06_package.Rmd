@@ -28,6 +28,46 @@ This package includes functions for the central dogma including constructing a r
 
 # Function 3 - Mathilde
 
+### `extract_codons()`
+
+The `extract_codons()` function splits a nucleotide sequence, which can be either DNA or RNA, into codons starting from a specified position. This is a key part of the translational process as these codons can then be translated into amino acids during the proteins synthesis.
+
+#### **Usage**
+
+```{r}
+extract_codons(sequence, start = 1)
+```
+
+#### Arguments
+
+-   sequence: A character string representing a nucleotide sequence composed of the letters A, T (or U), C, and G.
+
+-   start: An integer specifying the position to begin reading codons. The default is 1 and if changed it will represent a different reading frame.
+
+#### Value
+
+Returns a character vector where each element corresponds to one codon (a triplet of nucleotides) extracted from the input sequence.
+
+#### Details
+
+The function calculates the total sequence length. It then uses substrig() to extract triplets of the seqeunce starting from the specified position. Only actual triplets will be returned and the remaining nucleotides at the end of the sequence will be ignored.
+
+#### Examples
+
+```{r}
+# Example 1: Split a simple DNA sequence into codons
+extract_codons("ATGCGATAA")
+# Output: "ATG" "CGA" "TAA"
+
+# Example 2: Start reading from the second position (frame shift)
+extract_codons("ATGCGATAA", start = 2)
+# Output: "TGC" "GAT"
+
+# Example 3: RNA sequence example
+extract_codons("AUGCGAUAA")
+# Output: "AUG" "CGA" "UAA"
+```
+
 # Function 4 - Kristine
 
 # Function 5 - Alberte
