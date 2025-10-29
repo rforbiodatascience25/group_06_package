@@ -210,7 +210,7 @@ ggplot2 and stringr were added as dependencies for plotting and string handling.
 
 Using `pkg::function()` keeps the code explicit and avoids namespace clutter
 
-#### Testing: 
+#### Testing:
 
 Each function has its own unit tests using `testthat` to ensure that future edits do not break existing functionality. This makes the package more stable and reproducible.
 
