@@ -12,10 +12,10 @@
 #' @export
 #'
 #' @examples
-#' # Example 1: Simple peptide sequence
+#' # Example 1: Standard short amino acid sequence
 #' plot_aa_frequency("ACDEFGHIKLMNPQRSTVWY")
 #'
-#' # Example 2: HLA-A*0101 sequence
+#' # Example 2: Longer protein sequence (HLA-A*0101)
 #' plot_aa_frequency("MAVMAPRTLLLLLSGALALTQTWAGSHSMRYFFTSVSRPGRGEPRFIAVGYVDDTQFVRFDSDAASQRMEPRAPWIEQEGPEYWDQETRNVKAQSQTDRVDLGTLRGYYNQSEAGSHTIQIMYGCDVGSDGRFLRGYRQDAYDGKDYIALNEDLRSWTAADMAAQITKRKWEAAHEAEQLRAYLDGTCVEWLRRYLENGKETLQRTDPPKTHMTHHPISDHEATLRCWALGFYPAEITLTWQRDGEDQTQDTELVETRPAGDGTFQKWAAVVVPSGEEQRYTCHVQHEGLPKPLTLRWELSSQPTIPIVGIIAGLVLLGAVITGAVVAAVMWRRKSSDRKGGSYTQAASSDSAQGSDVSLTACKV")
 plot_aa_frequency <- function(sequence){
 
@@ -37,7 +37,12 @@ plot_aa_frequency <- function(sequence){
     ggplot2::ggplot(ggplot2::aes(x = Sequence, y = Counts, fill = Sequence)) +
     ggplot2::geom_col() +
     ggplot2::theme_bw() +
-    ggplot2::theme(legend.position = "none")
+    ggplot2::theme(legend.position = "none") +
+    ggplot2::labs(
+      title = "Amino acid Frequency",
+      x = "Amino acid",
+      y = "Count"
+    )
 
   return(aa_plot)
 }
