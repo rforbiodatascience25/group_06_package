@@ -42,13 +42,49 @@ This package includes functions for the central dogma including constructing a r
 
 ## Function 1 - Line
 
+### `generate_dna_sequence()` 
+
+The `generate_dna_sequence()` function generates a random DNA sequence composed of the nucleotides: adenine (A), thymine (T), cytosine (C), and guanine (G). The user specifies the sequence length, and then the function randomly selects the nucelotide bases.
+
+The generated sequence can then be transcribed into its corresponding RNA sequence.
+
+#### Usage 
+
+```{r}
+generate_dna_sequence(length)
+```
+
+#### Arguments
+
+`length`: An integer specifying the total number of nucleotides to include in the generated DNA sequence.
+
+#### Value
+
+The function returns a single character string representing a random DNA sequence composed of the letters A, T, G, and C.
+
+#### Details
+
+The function uses `sample()` to randomly choose nucleotide bases (A, T, G, and C). These bases are then joined together into one string using `paste0()`. Each run creates a new random sequence.
+
+#### Examples
+
+```{r}
+# Example 1: Generate a short DNA sequence of length 10
+generate_dna_sequence(10)
+# Output: "ATGCTTACGA"
+
+# Example 2: Generate a longer sequence of length 50
+generate_dna_sequence(50)
+# Output: "TTGCAAGTTAGCGCTAGTACGTTAGCTAGGCTTACGATGCGTACGGTAG"
+```
+
 ## Function 2 - Sigrid
 
 ### `dna_to_rna()`
 
-The `dna_to_rna()` function converts a DNA sequence into its corresponding RNA sequence. This is done by replacing every thymine ("T") nucleotide with a uracil ("U") nucleotide.\
+The `dna_to_rna()` function converts a DNA sequence into its corresponding RNA sequence. This is done by replacing every thymine ("T") nucleotide with a uracil ("U") nucleotide.
 
-This step represents transcription, producing a nucleotide sequence of RNA. This RNA sequence can then be split into codons.
+This step represents transcription, producing a nucleotide sequence of RNA. This RNA sequence can then be split into codons translated to amino acids.
 
 #### Usage
 
