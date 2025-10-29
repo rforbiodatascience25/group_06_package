@@ -32,4 +32,37 @@ This packange includes functions for the central dogma including constructing a 
 
 # Function 5 - Alberte
 
+### `plot_aa_frequency()`
+
+The `plot_aa_frequency()` function visualizes the composition of a protein or peptide sequence by plotting the frequency of each amino acid as a bar chart. This provides a quick overview of amino acid distribution, which can be useful for identifying compositional biases, comparing protein sequences, or validating sequence processing steps.
+
+#### Usage
+
+```{r}
+plot_aa_frequency("sequence")
+```
+
+#### **Arguments**
+
+-   **sequence** — A character string representing an amino acid sequence composed of single-letter amino acid codes (e.g., `"ACDEFGHIKLMNPQRSTVWY"`).
+
+#### **Value**
+
+A **ggplot2** bar plot showing the count of each amino acid in the provided sequence. Each bar corresponds to a unique amino acid, with height proportional to its frequency in the sequence.
+
+#### **Details**
+
+Internally, the function splits the input sequence into individual amino acids, counts their occurrences using `stringr::str_count()`, and constructs a frequency table. The result is rendered as a bar plot using **`ggplot2`** with a `theme_bw()` style. Amino acids are colored distinctly, but the legend is suppressed for visual clarity.
+
+#### **Examples**
+
+```{r}
+# Example 1: Standard short amino acid sequence
+plot_aa_frequency("ACDEFGHIKLMNPQRSTVWY")
+
+# Example 2: Longer protein sequence (HLA-A*0101)
+plot_aa_frequency("MAVMAPRTLLLLLSGALALTQTWAGSHSMRYFFTSVSRPGRGEPRFIAVGYVDDTQFVRFDSDAASQRMEPRAPWIEQEGPEYWDQETRNVKAQSQTDRVDLGTLRGYYNQSEAGSHTIQIMYGCDVGSDGRFLRGYRQDAYDGKDYIALNEDLRSWTAADMAAQITKRKWEAAHEAEQLRAYLDGTCVEWLRRYLENGKETLQRTDPPKTHMTHHPISDHEATLRCWALGFYPAEITLTWQRDGEDQTQDTELVETRPAGDGTFQKWAAVVVPSGEEQRYTCHVQHEGLPKPLTLRWELSSQPTIPIVGIIAGLVLLGAVITGAVVAAVMWRRKSSDRKGGSYTQAASSDSAQGSDVSLTACKV")
+
+```
+
 # Use cases and functions to include
