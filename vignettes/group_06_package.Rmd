@@ -1,6 +1,10 @@
 ---
 title: "group_06_package"
 output: rmarkdown::pdf_document
+header-includes:
+  - \usepackage{titlesec}
+  - \titleformat{\paragraph}[block]{\normalfont\normalsize\bfseries}{}{0pt}{}
+  - \titlespacing*{\paragraph}{0pt}{1.5ex plus .2ex}{1ex plus .2ex}
 vignette: >
   %\VignetteIndexEntry{group_06_package}
   %\VignetteEngine{knitr::rmarkdown}
@@ -13,7 +17,6 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
-
 ```
 
 ```{r setup}
@@ -38,6 +41,8 @@ Sigrid Frandsen, s205875
 
 Kristine Johansen, s215098
 
+**Link to GitHub:** <https://github.com/rforbiodatascience25/group_06_package>
+
 ## Description of package
 
 This package includes functions for the central dogma including constructing a random DNA sequence, transcribing it into RNA, extracting codons, translating the codons into amino acids and finally plotting the amino acid composition.
@@ -52,7 +57,7 @@ The generated sequence can subsequently be transcribed into its corresponding RN
 
 #### Usage
 
-```{r}
+```{r, eval=FALSE}
 generate_dna_sequence(length)
 ```
 
@@ -70,7 +75,7 @@ The function uses `sample()` to randomly choose nucleotide bases (A, T, G, and C
 
 #### Examples
 
-```{r}
+```{r, eval=FALSE}
 # Example 1: Generate a short DNA sequence of length 10
 generate_dna_sequence(10)
 # Output: "ATGCTTACGA"
@@ -90,7 +95,7 @@ This step represents transcription, producing a nucleotide sequence of RNA. This
 
 #### Usage
 
-```{r}
+```{r, eval=FALSE}
 dna_to_rna(dna_seq)
 ```
 
@@ -109,7 +114,7 @@ Lowercase letters remain unchanged. If lowercase sequences should also be conver
 
 #### Examples
 
-```{r}
+```{r, eval=FALSE}
 # Example 1: Convert a simple DNA sequence to RNA
 dna_to_rna("ATGCTTACG")
 # Output: "AUGCUUACG"
@@ -128,7 +133,7 @@ The `extract_codons()` function splits a nucleotide sequence, which can be eithe
 
 #### **Usage**
 
-```{r}
+```{r, eval=FALSE}
 extract_codons(sequence, start = 1)
 ```
 
@@ -148,7 +153,7 @@ The function calculates the total sequence length. It then uses substrig() to ex
 
 #### Examples
 
-```{r}
+```{r, eval=FALSE}
 # Example 1: Split a simple DNA sequence into codons
 extract_codons("ATGCGATAA")
 # Output: "ATG" "CGA" "TAA"
@@ -170,7 +175,7 @@ The `codons_to_aas() function` converts the codons provided from the `extract_co
 
 #### **Usage**
 
-```{r}
+```{r, eval=FALSE}
 codons_to_aas(c("AUG", "CGA", "UAA"))
 ```
 
@@ -188,7 +193,7 @@ The function takes each codon and "translate" it using the named vector "codon_t
 
 #### Examples
 
-```{r}
+```{r, eval=FALSE}
 # Example 1: Converting a single codon into the corresponding amino acid
 codons_to_aas("AUG")
 # returns "M"
@@ -208,7 +213,7 @@ The `plot_aa_frequency()` function visualizes the composition of a protein or pe
 
 #### Usage
 
-```{r}
+```{r, eval=FALSE}
 plot_aa_frequency("sequence")
 ```
 
@@ -226,7 +231,7 @@ Internally, the function splits the input sequence into individual amino acids, 
 
 #### **Examples**
 
-```{r}
+```{r, eval=FALSE}
 # Example 1: Standard short amino acid sequence
 plot_aa_frequency("ACDEFGHIKLMNPQRSTVWY")
 
@@ -247,7 +252,7 @@ It allows users to generate random DNA sequences, transcribe them into RNA, extr
 
 -   Pipeline integration: The functions can be chained together to form a full transcription–translation pipeline. An examples of this can be seen underneath.
 
-    ```{r}
+    ```{r, eval=FALSE}
     dna    <- generate_dna_sequence(30)
     rna    <- dna_to_rna(dna)
     codons <- extract_codons(rna)
