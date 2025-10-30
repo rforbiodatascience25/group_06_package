@@ -1,6 +1,6 @@
 ---
 title: "group_06_package"
-output: rmarkdown::html_vignette
+output: rmarkdown::pdf_document
 vignette: >
   %\VignetteIndexEntry{group_06_package}
   %\VignetteEngine{knitr::rmarkdown}
@@ -42,7 +42,7 @@ Kristine Johansen, s215098
 
 This package includes functions for the central dogma including constructing a random DNA sequence, transcribing it into RNA, extracting codons, translating the codons into amino acids and finally plotting the amino acid composition.
 
-## Function 1 - Line
+## Function 1
 
 ### `generate_dna_sequence()`
 
@@ -80,7 +80,7 @@ generate_dna_sequence(50)
 # Output: "TTGCAAGTTAGCGCTAGTACGTTAGCTAGGCTTACGATGCGTACGGTAG"
 ```
 
-## Function 2 - Sigrid
+## Function 2
 
 ### `dna_to_rna()`
 
@@ -120,7 +120,7 @@ dna_to_rna(c("TTTAAA", "GCTTGA", "ATG"))
 
 ```
 
-## Function 3 - Mathilde
+## Function 3
 
 ### `extract_codons()`
 
@@ -162,7 +162,7 @@ extract_codons("AUGCGAUAA")
 # Output: "AUG" "CGA" "UAA"
 ```
 
-## Function 4 - Kristine
+## Function 4
 
 ### `codons_to_aas()`
 
@@ -200,7 +200,7 @@ codons_to_aas(c("AUG", "UUU", "CGA"))
 
 ## 
 
-## Function 5 - Alberte
+## Function 5
 
 ### `plot_aa_frequency()`
 
@@ -251,7 +251,7 @@ It allows users to generate random DNA sequences, transcribe them into RNA, extr
     dna    <- generate_dna_sequence(30)
     rna    <- dna_to_rna(dna)
     codons <- extract_codons(rna)
-    aas    <- codons_to_aas(codons, code = codon_table)
+    aas    <- codons_to_aas(codons)
     plot_aa_frequency(paste(aas, collapse = ""))
     ```
 
