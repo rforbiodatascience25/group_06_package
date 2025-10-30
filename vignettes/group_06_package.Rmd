@@ -9,9 +9,11 @@ vignette: >
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
+  #dev = "ragg_png",
   collapse = TRUE,
   comment = "#>"
 )
+
 ```
 
 ```{r setup}
@@ -46,7 +48,7 @@ This package includes functions for the central dogma including constructing a r
 
 The `generate_dna_sequence()` function generates a random DNA sequence composed of the nucleotides: adenine (A), thymine (T), cytosine (C), and guanine (G). The user specifies the sequence length, and then the function randomly selects the nucelotide bases.
 
-The generated sequence can then be transcribed into its corresponding RNA sequence.
+The generated sequence can subsequently be transcribed into its corresponding RNA sequence.
 
 #### Usage
 
@@ -115,7 +117,6 @@ dna_to_rna("ATGCTTACG")
 # Example 2: Convert multiple sequences at once
 dna_to_rna(c("TTTAAA", "GCTTGA", "ATG"))
 # Output: "UUUAAA" "GCUUGA" "AUG"
-
 
 ```
 
@@ -238,13 +239,11 @@ plot_aa_frequency("MAVMAPRTLLLLLSGALALTQTWAGSHSMRYFFTSVSRPGRGEPRFIAVGYVDDTQFVRFD
 
 The use of all functions provides a complete workflow following the central dogma of molecular biology.
 
-It allows users to generate random DNA sequences, transcribe them into RNA, extract codons, translate the codons into amino acids, and visualize amino acid composition. Together, these steps illustrate the key processes of gene expression
+It allows users to generate random DNA sequences, transcribe them into RNA, extract codons, translate the codons into amino acids, and visualize the resulting amino acid composition. Together, these steps illustrate the key processes of gene expression.
 
 ### Use cases
 
 -   Quick demonstrations: Users can quickly generate sequences and visualize amino acid frequencies without needing large external datasets or complex bioinformatics tools.
-
-<!-- -->
 
 -   Pipeline integration: The functions can be chained together to form a full transcription–translation pipeline. An examples of this can be seen underneath.
 
@@ -256,9 +255,9 @@ It allows users to generate random DNA sequences, transcribe them into RNA, extr
     plot_aa_frequency(paste(aas, collapse = ""))
     ```
 
--   educational tool?
+-   Education: The functions would work well as an educational tool for students new in the biology world as it clearly visualizes each important step of the central dogma with room for full immersion.
 
--   Testing and prototyping?
+-   Testing and prototyping: the functions could also serve as a simple tool to test new packages in the same field as the functions are clearly split into the individual steps and therefore easy to use and test the output of different steps.
 
 ### Functions to include in the future
 
@@ -266,7 +265,7 @@ To make the package more comprehensive, the following additions could be useful:
 
 -   A function checking that a sequence contains only valid nucleotide letters.
 
--   A function that return the reverse complement of a DNA strand
+-   A function that return the reverse complement of a DNA strand.
 
 ### Main points from Task 3 discussion
 
@@ -276,11 +275,11 @@ Each group member implemented one biological step: Generating DNA (`generate_dna
 
 #### Dependencies:
 
-ggplot2 and stringr were added as dependencies for plotting and string handling. These were listed under Imports in the `DESCRIPTION` file. Minimizing dependencies reduces installation time and possible conflicts. However, it is sometimes unavoidable for visualization or specialized functions.
+`ggplot2` and `stringr` were added as dependencies for plotting and string handling. These were listed under "Imports" in the `DESCRIPTION` file. Minimizing dependencies reduces installation time and possible conflicts. However, it is sometimes unavoidable for visualization or specialized functions.
 
 #### **Namespace and imports:**
 
-Using `pkg::function()` keeps the code explicit and avoids namespace clutter
+Using `pkg::function()` keeps the code explicit and avoids namespace clutter.
 
 #### Testing:
 
