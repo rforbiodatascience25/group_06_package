@@ -42,13 +42,13 @@ This package includes functions for the central dogma including constructing a r
 
 ## Function 1 - Line
 
-### `generate_dna_sequence()` 
+### `generate_dna_sequence()`
 
 The `generate_dna_sequence()` function generates a random DNA sequence composed of the nucleotides: adenine (A), thymine (T), cytosine (C), and guanine (G). The user specifies the sequence length, and then the function randomly selects the nucelotide bases.
 
 The generated sequence can then be transcribed into its corresponding RNA sequence.
 
-#### Usage 
+#### Usage
 
 ```{r}
 generate_dna_sequence(length)
@@ -162,6 +162,42 @@ extract_codons("AUGCGAUAA")
 ```
 
 ## Function 4 - Kristine
+
+### `codons_to_aas()`
+
+The `codons_to_aas() function` converts the codons provided from the `extract_codons()` into a sequence of the corresponding amino acids. In that way, this function handles the "translation" part of the central dogma, converting the RNA into proteins.
+
+#### **Usage**
+
+```{r}
+codons_to_aas(c("AUG", "CGA", "UAA"))
+```
+
+#### Arguments
+
+A single codon as a string or a list of codons as strings. The codons consist of three of the bases A, U, C, and G.
+
+#### Value
+
+Returns a string of amino acids (peptide / protein sequence) corresponding to the provided codons.
+
+#### Details
+
+The function takes each codon and "translate" it using the named vector "codon_table" located in the data directory. Each amino acid is extracted by subsetting the codon_table using the codons. After this, the resulting character vector is converted into a single string using `paste0`
+
+#### Examples
+
+```{r}
+# Example 1: Converting a single codon into the corresponding amino acid
+codons_to_aas("AUG")
+# returns "M"
+
+#Example 2: Converting a list of codons into an amino acid sequence
+codons_to_aas(c("AUG", "UUU", "CGA"))
+# returns "MFR"
+```
+
+## 
 
 ## Function 5 - Alberte
 
