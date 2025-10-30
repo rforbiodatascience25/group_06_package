@@ -56,7 +56,7 @@ generate_dna_sequence(length)
 
 #### Arguments
 
-`length`: An integer specifying the total number of nucleotides to include in the generated DNA sequence.
+-   length: An integer specifying the total number of nucleotides to include in the generated DNA sequence.
 
 #### Value
 
@@ -94,7 +94,7 @@ dna_to_rna(dna_seq)
 
 #### Arguments
 
-`dna_seq`: A character string or vector representing one or more DNA sequences composed of the nucelotides A, T, C, and G.
+-   dna_seq: A character string or vector representing one or more DNA sequences composed of the nucelotides A, T, C, and G.
 
 #### Value
 
